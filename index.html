@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HealthGenix</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- 🔷 NAVBAR -->
+<header>
+    <nav class="navbar">
+        <h1>🧬 HealthGenix</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#checker">Symptoms</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 🌟 HERO -->
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>HealthGenix</h1>
+        <p>"Empowering lives through biotechnology and smart health solutions."</p>
+        <button onclick="scrollToSection()">Get Started</button>
+    </div>
+</section>
+
+<!-- 🧪 SYMPTOM CHECKER -->
+<section id="checker">
+    <h2>Check Your Symptoms</h2>
+
+    <label><input type="checkbox" id="fever"> Fever</label>
+    <label><input type="checkbox" id="cough"> Cough</label>
+    <label><input type="checkbox" id="fatigue"> Fatigue</label>
+    <label><input type="checkbox" id="headache"> Headache</label>
+
+    <br><br>
+    <button onclick="checkDisease()">Analyze</button>
+
+    <h3 id="result"></h3>
+</section>
+
+<!-- 🦠 DISEASE CARDS -->
+<section>
+    <h2>Common Symptoms</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="images/fever.png" alt="">
+            <h3>Fever</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/cough.png" alt="">
+            <h3>Cough</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/headache.png" alt="">
+            <h3>Headache</h3>
+        </div>
+    </div>
+</section>
+
+<!-- 🧬 BIOTECH -->
+<section>
+    <h2>Biotechnology</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="images/dna.png" alt="">
+            <h3>DNA</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/crispr.jpg" alt="">
+            <h3>CRISPR</h3>
+        </div>
+
+        <div class="card">
+            <img src="images/microscope.png" alt="">
+            <h3>Microscope</h3>
+        </div>
+    </div>
+</section>
+
+<!-- 📊 CHART -->
+<section>
+    <h2>Health Data</h2>
+    <canvas id="myChart"></canvas>
+</section>
+
+<!-- 🧠 QUIZ -->
+<section id="quiz">
+    <h2>Quick Quiz</h2>
+
+    <p>1. DNA stands for?</p>
+    <button onclick="checkAnswer(1)">Deoxyribonucleic Acid</button>
+    <button onclick="checkAnswer(0)">Digital Network Array</button>
+
+    <p>2. CRISPR is used for?</p>
+    <button onclick="checkAnswer(1)">Gene Editing</button>
+    <button onclick="checkAnswer(0)">Blood Test</button>
+
+    <h3 id="score"></h3>
+</section>
+
+<!-- 📖 ABOUT -->
+<section>
+    <h2>About</h2>
+    <img src="images/hospital.jpg" width="200">
+    <p>HealthGenix spreads awareness about health and biotechnology.</p>
+</section>
+
+<!-- 🔻 FOOTER -->
+<footer>
+    <p>© 2026 HealthGenix</p>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
